@@ -5,7 +5,7 @@
 
 # React Native Countdown Circle
 
-![React Native Countdown Circles](/README/featured.png?raw=true "React Native Countdown Circles")
+![React Native Countdown Circles](/README/featured.gif?raw=true "React Native Countdown Circles")
 
 ## Features
 
