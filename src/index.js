@@ -214,7 +214,6 @@ export default class PercentageCircle extends Component {
             height: this.props.radius * 2,
             borderRadius: this.props.radius,
             backgroundColor: this.props.color,
-            margin: 30,
           },
         ]}
       >
