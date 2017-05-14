@@ -1,0 +1,38 @@
+{
+  "name": "react-native-countdown-circle",
+  "version": "1.0.0",
+  "description": "A light-weight countdown circle indicator for React Native.",
+  "main": "src/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MrToph/react-native-countdown-circle.git"
+  },
+  "keywords": [
+    "react",
+    "react native",
+    "percentage",
+    "circle",
+    "countdown",
+    "timer",
+    "indicator"
+  ],
+  "author": "Christoph Michel",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "babel-jest": "19.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.44.0"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.44.0",
+    "react": "*"
+  }
+}
