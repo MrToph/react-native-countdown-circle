@@ -51,12 +51,8 @@ render() {
 | bgColor | The inner background color of the component  | String |  | ![#e9e9ef](https://placehold.it/15/e9e9ef/000000?text=+) `'#e9e9ef'` |
 | containerStyle | The custom styling which will be applied to the container of the Text component | Style |  | `null` |
 | textStyle | The custom styling which will be applied to the Text component | Style |  | `null` |
-| updateText | A function used to display a different text inside this component. Gets called after every seconds with the number of elapsed seconds and the total seconds | func |  | ```javascript
-(elapsedSeconds, totalSeconds) => (totalSeconds - elapsedSeconds).toString()
-``` |
-| onTimeElapsed | A function that gets called when the countdown is over | func |  | ```javascript
-() => null
-``` |
+| updateText | A function used to display a different text inside this component. Gets called after every seconds with the number of elapsed seconds and the total seconds | func | | ` (elapsedSecs, totalSecs) => (totalSecs - elapsedSecs).toString()` |
+| onTimeElapsed | A function that gets called when the countdown is over | func |  | ` () => null` |
 
 ## Author
 
