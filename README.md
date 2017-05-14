@@ -30,11 +30,13 @@ import CountdownCircle from 'react-native-countdown-circle'
 render() {
     return (
         <CountdownCircle
-            seconds={4}
+            seconds={10}
             radius={30}
-            borderWidth={4}
-            color="#00f"
-            onTimeElapsed={() => console.log('Elapsed, time to f')}
+            borderWidth={8}
+            color="#ff003f"
+            bgColor="#fff"
+            textStyle={{ fontSize: 20 }}
+            onTimeElapsed={() => console.log('Elapsed!')}
         />
     )
 }
