@@ -12,7 +12,7 @@
 * Custom colors
 * Custom size and border radius
 * Light-weight: No other dependencies besides `react-native`
-* Performant: Uses React Native's [`Animated`](https://facebook.github.io/react-native/docs/animations.html) library
+* Performant and Smooth: Uses React Native's [`Animated`](https://facebook.github.io/react-native/docs/animations.html) library
 
 ## Installation
 
