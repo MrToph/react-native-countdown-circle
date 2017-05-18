@@ -8,6 +8,11 @@ import {
   ViewPropTypes,
 } from 'react-native'
 
+// compatability for react-native versions < 0.44
+const ViewPropTypesStyle = ViewPropTypes
+  ? ViewPropTypes.style
+  : View.propTypes.style
+
 const styles = StyleSheet.create({
   outerCircle: {
     justifyContent: 'center',
@@ -84,7 +89,7 @@ export default class PercentageCircle extends Component {
     shadowColor: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
     bgColor: PropTypes.string,
     borderWidth: PropTypes.number,
-    containerStyle: ViewPropTypes.style,
+    containerStyle: ViewPropTypesStyle,
     textStyle: Text.propTypes.style,
     updateText: PropTypes.func,
     onTimeElapsed: PropTypes.func,
