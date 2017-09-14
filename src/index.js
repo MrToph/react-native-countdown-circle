@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import {
   Easing,
   Animated,
@@ -8,6 +7,7 @@ import {
   View,
   ViewPropTypes,
 } from 'react-native'
+import PropTypes from 'prop-types'
 
 // compatability for react-native versions < 0.44
 const ViewPropTypesStyle = ViewPropTypes
@@ -29,10 +29,12 @@ const styles = StyleSheet.create({
   leftWrap: {
     position: 'absolute',
     top: 0,
+    left: 0,
   },
   halfCircle: {
     position: 'absolute',
     top: 0,
+    left: 0,
     borderTopRightRadius: 0,
     borderBottomRightRadius: 0,
     backgroundColor: '#f00',
@@ -82,7 +84,7 @@ function getInitialState(props) {
   }
 }
 
-export default class PercentageCircle extends Component {
+export default class PercentageCircle extends React.PureComponent {
   static propTypes = {
     seconds: PropTypes.number.isRequired,
     radius: PropTypes.number.isRequired,
@@ -118,10 +120,20 @@ export default class PercentageCircle extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState(getInitialState(nextProps), this.restartAnimation)
+    if (
+      Object.keys(nextProps).some(
+        field => nextProps[field] !== this.props[field],
+      )
+    ) {
+      this.state.circleProgress.stopAnimation()
+      this.setState(getInitialState(nextProps), this.restartAnimation)
+    }
   }
 
-  onCircleAnimated = () => {
+  onCircleAnimated = ({ finished }) => {
+    // if animation was interrupted by stopAnimation don't restart it.
+    if (!finished) return
+
     const secondsElapsed = this.state.secondsElapsed + 1
     const callback = secondsElapsed < this.props.seconds
       ? this.restartAnimation
@@ -157,7 +169,6 @@ export default class PercentageCircle extends Component {
         style={[
           styles.leftWrap,
           {
-            left: radius,
             width: radius,
             height: radius * 2,
           },
@@ -167,7 +178,6 @@ export default class PercentageCircle extends Component {
           style={[
             styles.halfCircle,
             {
-              left: -radius,
               width: radius,
               height: radius * 2,
               borderRadius: radius,

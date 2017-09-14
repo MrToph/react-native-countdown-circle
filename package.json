@@ -1,6 +1,6 @@
 {
   "name": "react-native-countdown-circle",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "A light-weight countdown circle indicator for React Native.",
   "main": "src/index.js",
   "scripts": {},
@@ -28,12 +28,13 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
+    "prop-types": "^15.5.10",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0"
   },
   "peerDependencies": {
-    "react-native": "*",
+    "prop-types": "*",
     "react": "*",
-    "prop-types": "*"
+    "react-native": "*"
   }
 }
