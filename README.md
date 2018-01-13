@@ -56,6 +56,8 @@ render() {
 | updateText | A function used to display a different text inside this component. Is called after every second, with the number of _elapsed_ seconds, and the _total_ seconds | func | | ` (elapsedSecs, totalSecs) => (totalSecs - elapsedSecs).toString()` |
 | onTimeElapsed | A function being called when the countdown is over | func |  | ` () => null` |
 
+> Note: Setting the `seconds` prop to a different value restarts the timer with that new value.
+
 ## Author
 
 [Christoph Michel](http://cmichel.io)
