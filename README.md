@@ -47,6 +47,7 @@ render() {
 | :--- | :----- | :--- | :---: | :---: |
 | seconds | The seconds to count down from | Number | ✓ |  |
 | radius | The radius in `px` of the component (including border) | Number | ✓ |  |
+| reStart | This is to restart the countdown at will | Boolean | | null | 
 | borderWidth | The border width in `px` | Number | ✓ |  |
 | color | The border color | String |  | ![#f00](https://placehold.it/15/f00/000000?text=+) `'#f00'` |
 | shadowColor | The background color of the border | String |  | ![#999](https://placehold.it/15/999/000000?text=+) `'#999'` |
