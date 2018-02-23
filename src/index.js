@@ -96,6 +96,7 @@ export default class PercentageCircle extends React.PureComponent {
     textStyle: Text.propTypes.style,
     updateText: PropTypes.func,
     onTimeElapsed: PropTypes.func,
+    reStart: PropTypes.bool
   };
 
   static defaultProps = {
@@ -106,6 +107,7 @@ export default class PercentageCircle extends React.PureComponent {
     seconds: 10,
     children: null,
     containerStyle: null,
+    reStart: false,
     textStyle: null,
     onTimeElapsed: () => null,
     updateText: (elapsedSeconds, totalSeconds) =>
@@ -121,7 +123,7 @@ export default class PercentageCircle extends React.PureComponent {
 
   componentWillReceiveProps(nextProps) {
     if (
-      this.props.seconds !== nextProps.seconds
+      this.props.seconds !== nextProps.seconds || nextProps.reStart
     ) {
       this.state.circleProgress.stopAnimation()
       this.setState(getInitialState(nextProps), this.restartAnimation)
