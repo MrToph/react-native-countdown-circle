@@ -16,6 +16,7 @@ const ViewPropTypesStyle = ViewPropTypes
 
 const styles = StyleSheet.create({
   outerCircle: {
+    overflow: 'hidden',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#e3e3e3',
